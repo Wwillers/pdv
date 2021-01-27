@@ -27,3 +27,10 @@ Route.get('/', async () => {
 //Users Routes
 Route.get('users', 'UsersController.index')
 Route.post('users', 'UsersController.create')
+Route.get('users/:id', 'UsersController.show')
+Route.delete('users', 'UsersController.delete').middleware('auth')
+Route.delete('users/:id', 'UsersController.deleteUsers').middleware(['auth', 'admin'])
+Route.post('users/edit', 'UsersController.update').middleware('auth')
+
+//Authentication Routes
+Route.post('/auth', 'AuthController.login')
