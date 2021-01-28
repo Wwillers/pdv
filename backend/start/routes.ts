@@ -21,7 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async () => {
-	return { hello: 'world' }
+  return { hello: 'world' }
 })
 
 //Users Routes
@@ -34,3 +34,14 @@ Route.post('users/edit', 'UsersController.update').middleware('auth')
 
 //Authentication Routes
 Route.post('/auth', 'AuthController.login')
+
+//Clients Routes
+Route.get('clients', 'ClientsController.index').middleware('auth')
+Route.post('clients', 'ClientsController.create').middleware('auth')
+Route.get('clients/:id', 'ClientsController.show').middleware('auth')
+Route.post('clients/edit/:id', 'ClientsController.update').middleware('auth')
+Route.post('clients/edit/:id/credit', 'ClientsController.updateCredit').middleware([
+  'auth',
+  'admin',
+])
+Route.delete('clients/:id', 'ClientsController.destroy').middleware(['auth', 'admin'])
