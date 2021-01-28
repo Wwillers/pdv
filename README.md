@@ -19,9 +19,6 @@
 
   O projeto está sendo criado para fins didáticos e com o intuito de auxiliar pequenos comércios. A ideia inicial é permitir o registro de vendas bem como o controle de estoque
   de uma forma simplificada.
-  
-  Estarei colocando em pŕatica o conhecimento adquirido e aproveitando para aprender novas tecnologias durante o percurso.
-  
 
 ### Status
   
