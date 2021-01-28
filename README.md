@@ -28,7 +28,7 @@
 ### Features
 
 - [x] Cadastro de usuário
-- [ ] Cadastro de cliente
+- [x] Cadastro de cliente
 - [ ] Cadastro de produtos
 - [ ] Registro de Vendas
 
