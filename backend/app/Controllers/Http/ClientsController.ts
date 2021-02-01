@@ -36,15 +36,11 @@ export default class ClientsController {
     return response.status(201).json(client)
   }
 
-  public async store({}: HttpContextContract) {}
-
   public async show({ params, response }: HttpContextContract) {
     const { id } = params
     const client = Client.find(id)
     return response.json(client)
   }
-
-  public async edit({}: HttpContextContract) {}
 
   public async update({ params, request, response }: HttpContextContract) {
     const { id } = params
@@ -85,7 +81,15 @@ export default class ClientsController {
 
     await client.save()
 
-    return response.status(200).json(client)
+    const newClientInfo = {
+      id: client.id,
+      name: client.name,
+      lastname: client.lastname,
+      creditquantity: client.creditquantity,
+      status: client.status,
+    }
+
+    return response.status(200).json(newClientInfo)
   }
 
   public async destroy({ params, response }: HttpContextContract) {
