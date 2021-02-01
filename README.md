@@ -31,6 +31,7 @@
 - [x] Cadastro de cliente
 - [ ] Cadastro de produtos
 - [ ] Registro de Vendas
+- [ ] Controle de Estoque
 
 ### Pré-requisitos
 
